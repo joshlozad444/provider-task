@@ -2,10 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Provider extends Model
 {
-    use HasFactory;
+    /**
+     * Overriding defaults $table, $primaryKey and $timestamps
+     * By convention, current values for $table and $primaryKey is already Eloquent's default
+     * but doing this just in case values are to be changed.
+     */
+    protected $table = 'providers';
+
+    protected $primaryKey = 'provider_id';
+
+    public $timestamps = false;
 }
