@@ -15,5 +15,13 @@ class Provider extends Model
 
     protected $primaryKey = 'provider_id';
 
+    /**
+     * override default "timestamp"-ing
+     */
     public $timestamps = false;
+
+    /**
+     * set fillable property to enable mass assignment: Provider::create
+     */
+    protected $fillable = ['provider_name', 'provider_url'];
 }

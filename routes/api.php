@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::controller(ProviderController::class)->group(function() {
     Route::get('/providers', 'getProviders');
     Route::post('/providers', 'addProvider');
-    Route::put('/providers/{provider_id}', 'updateProvider');
+    Route::post('/providers/{provider_id}', 'updateProvider');
     Route::delete('/providers/{provider_id}', 'deleteProvider');
 });
